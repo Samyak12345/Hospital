@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Log In</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <nav class="sub-bar" id="top">
+    <div class="container">
+      <ul class="social">
+        <li class="icon facebook"><a href="#">facebook</a></li>
+        <li class="icon twitter"><a href="#">twitter</a></li>
+        <li class="icon instagram"><a href="#">instagram</a></li>
+        <li class="icon youtube"><a href="#">youtube</a></li>
+      </ul>
+      <p class="phone">
+       <span class="number"> +080-4244-5555</span>
+      </p>
+    </div>
+    <div class="clr"></div>
+  </nav>
+ 
+  <header>
+    <div class="container">
+      <h1>Lovely Hospital</h1>
+      <nav class="main-bar">
+       <ul class="list">
+         <li><a href="index.html">Home</a></li>
+         <li><a href="about.html">About Us</a></li>
+         <li><a href="services.html">Services</span></a></li>
+         <li><a href="contact.html">Contact</a></li>
+         <li style="background:#02bcf5;"><a href="log.html"><span>SIGN IN</span></a></li>
+       </ul>
+      </nav>
+    </div>   
+    <div class="clr"></div>
+  </header>
+
+  <div class="about-us">
+    <h1>SIGN IN</h1>
+  </div>
+
+  <div class="container">
+    <section class="sign">
+      <h2>WELCOME <span>BACK</span></h2>
+	
+      <input type="text" placeholder="Username*" id="Username" required>
+      <input type="password" placeholder="Password*" id="Password" required>
+    <button  id="submit" onclick="validate()">Sign In</button> 
+      <a href="#">Forgot Password?</a>
+    
+	</section>
+    
+</section>
+</div>
+
+  <footer>
+    <div class="container">
+    <p><span>Lovely Hospital</span> &copy; 2018 All right reserved.</p>
+    <div class="floater">
+        <ul class="social">
+            <li class="icon facebook"><a href="#">facebook</a></li>
+            <li class="icon twitter"><a href="#">twitter</a></li>
+            <li class="icon instagram"><a href="#">instagram</a></li>
+            <li class="icon youtube"><a href="#">youtube</a></li>
+          </ul>
+      <a href="#top" class="button">Link to top</a>
+    </div>
+  </div>
+  <div class="clr"></div>
+  </footer>
+
+   <script type="text/javascript">
+    
+
+var attempt = 4; // Variable to count number of attempts.
+// Below function Executes on click of login button.
+function validate(){
+var username = document.getElementById("Username").value;
+var password = document.getElementById("Password").value;
+if ( username == "kiran" && password == "kiran123"){
+alert ("Login successfully");
+window.location = "specialA.html"; // Redirecting to other page.
+return false;
+}
+ else if ( username == "doc" && password == "doc123"){
+alert ("Login successfully");
+window.location = "special.html"; // Redirecting to other page.
+return false;
+}
+else if ( username == "user" && password == "user123"){
+alert ("Login successfully");
+window.location = "special.html"; // Redirecting to other page.
+return false;
+}
+else {
+attempt --;
+// Decrementing by one.
+if(attempt>0){
+alert("You have left "+attempt+" attempt;");}
+// Disabling fields after 3 attempts.
+else{
+document.getElementById("Username").disabled = true;
+document.getElementById("Password").disabled = true;
+document.getElementById("submit").disabled = true;
+return false;
+}
+
+}
+}
+
+
+  </script>
+
+
+</body>
+</html>
